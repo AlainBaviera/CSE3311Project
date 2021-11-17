@@ -1,5 +1,6 @@
 package com.example.cse3311project;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class LoginPage extends AppCompatActivity {
+public class Login extends AppCompatActivity {
     private EditText Name;
     private EditText Password;
     private TextView Info;
@@ -19,7 +20,7 @@ public class LoginPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         Name = findViewById(R.id.ETextPersonName);
         Password = findViewById(R.id.ETextPassword);
@@ -27,18 +28,14 @@ public class LoginPage extends AppCompatActivity {
         Login = findViewById(R.id.LoginButton);
 
 
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validate(Name.getText().toString(),Password.getText().toString());
-            }
-        });
+        Login.setOnClickListener(view -> validate(Name.getText().toString(),Password.getText().toString()));
 
     }
+    @SuppressLint("SetTextI18n")
     private void validate(String userName, String userPassword){
         if((userName.equals("Admin")) && (userPassword.equals("123"))) {
-            Intent intent = new Intent(LoginPage.this, HomePage.class);
-            startActivity(intent);
+            Intent loginUser = new Intent(com.example.cse3311project.Login.this, HomePage.class);
+            startActivity(loginUser);
         }else{
             counter--;
 

@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">CSE3311Project</string>
+    <string name="profile_page">Profile Page</string>
+    <string name="buy_trade">Buy/Trade</string>
+    <string name="sell">sell</string>
+    <string name="messaging">Messaging</string>
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="home_page">Home Page</string>
+    <string name="search">Search</string>
+    <string name="sell_page">Sell Page</string>
+    <string name="buy_trade_page">Buy/Trade Page</string>
+    <string name="search_page">search_page</string>
+    <string name="messagin_page">Messagin Page</string>
 </resources>

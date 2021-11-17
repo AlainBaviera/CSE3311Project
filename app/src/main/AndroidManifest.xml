@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE3311Project">
-        <activity android:name=".HomePage"></activity>
-        <activity android:name=".LoginPage">
+        <activity android:name=".Sell"></activity>
+        <activity android:name=".Search" />
+        <activity android:name=".Messaging" />
+        <activity android:name=".Profile" />
+        <activity android:name=".BuyTrade" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
