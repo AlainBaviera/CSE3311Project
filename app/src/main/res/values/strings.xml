@@ -13,4 +13,9 @@
     <string name="buy_trade_page">Buy/Trade Page</string>
     <string name="search_page">search_page</string>
     <string name="messagin_page">Messagin Page</string>
+    <string name="item_name">Item Name</string>
+    <string name="price">Price</string>
+    <string name="category">Category</string>
+    <string name="username">Username</string>
+    <string name="submit">Submit</string>
 </resources>
