@@ -3,8 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.325" />
         <entry key="..\:/Users/amich/StudioProjects/CSE3311Project/app/src/main/res/layout/activity_search.xml" value="0.36231884057971014" />
         <entry key="..\:/Users/amich/StudioProjects/CSE3311Project/app/src/main/res/layout/activity_sell.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_buy_trade.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/activity_home_page.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_messging.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.18908065711657246" />
+        <entry key="app/src/main/res/layout/activity_search.xml" value="0.12291666666666666" />
+        <entry key="app/src/main/res/layout/activity_sell.xml" value="10.0" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.2197762980587732" />
       </map>
     </option>
   </component>
