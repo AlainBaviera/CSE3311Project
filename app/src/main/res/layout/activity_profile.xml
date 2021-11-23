@@ -113,8 +113,13 @@
             android:text="12345"
             android:layout_marginLeft="60dp"/>
 
-
     </LinearLayout>
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="350dp"/>
 
     <View
         android:layout_width="match_parent"
