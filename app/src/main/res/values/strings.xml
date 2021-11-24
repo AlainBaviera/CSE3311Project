@@ -25,4 +25,5 @@
     <string name="password">Password</string>
     <string name="Login">LOGIN</string>
     <string name="Register" />
+    <string name="registerButton">Register</string>
 </resources>
