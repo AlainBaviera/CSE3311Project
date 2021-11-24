@@ -17,6 +17,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        this.setTitle("CSE 3311 Project");
+
         Email = findViewById(R.id.email);
         Password = findViewById(R.id.password);
         Button login = findViewById(R.id.login);
@@ -37,9 +39,12 @@ public class Login extends AppCompatActivity {
             }
 
             Auth.signInWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
-                Toast.makeText(Login.this, "Successful Login", Toast.LENGTH_LONG).show();
-                startActivity(new Intent(Login.this, HomePage.class));
-                finish();
+                if(task.isSuccessful()){
+                    Toast.makeText(Login.this, "Successful Login", Toast.LENGTH_LONG).show();
+                    startActivity(new Intent(Login.this, HomePage.class));
+                    finish();
+                } else
+                    Toast.makeText(Login.this, "Password or Email is Incorrect. Try again", Toast.LENGTH_LONG).show();
             });
         });
         register.setOnClickListener(v -> {

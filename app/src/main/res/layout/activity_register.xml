@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="12dp"
@@ -34,6 +35,7 @@
         android:layout_marginTop="15sp"
         android:text="@string/register"
         android:padding="10dp"
+        app:backgroundTint="@android:color/tertiary_text_light"
         android:id="@+id/registerButton"/>
 
 

@@ -11,6 +11,7 @@
     tools:context=".Login">
 
 
+
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
@@ -36,20 +37,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
-        android:background="#393636"
         android:padding="10dp"
         android:text="@string/Login"
-        app:backgroundTint="@color/teal_200" />
+        app:backgroundTint="@android:color/tertiary_text_light" />
 
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15sp"
-        android:background="#393636"
         android:padding="10dp"
-        android:text="@string/Register"
-        app:backgroundTint="@color/teal_200" />
+        android:text="@string/registerButton"
+        app:backgroundTint="@android:color/tertiary_text_light" />
 
 
 </LinearLayout>
