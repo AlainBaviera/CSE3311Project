@@ -6,16 +6,23 @@
     <string name="messaging">Messaging</string>
     <string name="name">Name</string>
     <string name="login">Login</string>
-    <string name="password">Password</string>
     <string name="home_page">Home Page</string>
     <string name="search">Search</string>
     <string name="sell_page">Sell Page</string>
     <string name="buy_trade_page">Buy/Trade Page</string>
     <string name="search_page">search_page</string>
-    <string name="messagin_page">Messagin Page</string>
+    <string name="messaging_page">Messaging Page</string>
     <string name="item_name">Item Name</string>
     <string name="price">Price</string>
     <string name="category">Category</string>
     <string name="username">Username</string>
     <string name="submit">Submit</string>
+    <string name="Username">Username</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="register">REGISTER</string>
+    <string name="email">email</string>
+    <string name="password">Password</string>
+    <string name="Login">LOGIN</string>
+    <string name="Register" />
 </resources>
