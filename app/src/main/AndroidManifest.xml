@@ -10,7 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CSE3311Project">
-        <activity android:name=".Register"/>
+        <activity
+            android:name=".PurchasePage"
+            android:exported="false" />
+        <activity android:name=".Register" />
         <activity android:name=".Sell" />
         <activity android:name=".Search" />
         <activity android:name=".Messaging" />
