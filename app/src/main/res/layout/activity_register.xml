@@ -9,6 +9,16 @@
     android:layout_height="match_parent"
     tools:context=".Register">
 
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="@string/Username"
+        android:padding="10dp"
+        android:id="@+id/usernameRegister"
+        android:autofillHints=""
+        android:inputType="textPersonName" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

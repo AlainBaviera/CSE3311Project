@@ -14,7 +14,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     Context context;
     ArrayList<Item> list;
-    private OnItemListener mOnItemListener;
+    private final OnItemListener mOnItemListener;
 
 
     public MyAdapter(Context context, ArrayList<Item> list, OnItemListener onItemListener) {
@@ -34,7 +34,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         Item item = list.get(position);
         holder.itemName.setText(item.getItemName());
-        holder.itemPrice.setText(Float.toString((float) item.getItemPrice()));
+        holder.itemPrice.setText(Float.toString(item.getItemPrice()));
         holder.itemCategory.setText(item.getItemCategory());
         holder.itemUser.setText(item.getItemUser());
     }

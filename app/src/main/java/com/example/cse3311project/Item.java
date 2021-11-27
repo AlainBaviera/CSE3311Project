@@ -11,6 +11,13 @@ public class Item implements Parcelable {
 
     }
 
+    public Item(String itemName, String itemCategory, String itemUser, float itemPrice) {
+        this.itemName = itemName;
+        this.itemCategory = itemCategory;
+        this.itemUser = itemUser;
+        this.itemPrice = itemPrice;
+    }
+
     protected Item(Parcel in) {
         itemName = in.readString();
         itemCategory = in.readString();

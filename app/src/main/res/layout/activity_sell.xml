@@ -1,69 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="12dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Sell">
 
-    <LinearLayout
-        android:id="@+id/linearlayout"
-        android:layout_width="wrap_content"
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="186dp"
-        android:orientation="vertical"
-        tools:ignore="UselessParent">
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:text="Enter Item Description"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="154dp"
-            android:layout_height="match_parent"
-            android:text="@string/sell_page" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Item Name"
+        android:padding="10dp"
+        android:id="@+id/ItemName"
+        android:autofillHints=""
+        android:inputType="text" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Price"
+        android:padding="10dp"
+        android:id="@+id/ItemPrice"
+        android:autofillHints=""
+        android:inputType="text" />
 
-        <EditText
-            android:id="@+id/ItemName"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/item_name"
-            android:inputType="textPersonName" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Category"
+        android:padding="10dp"
+        android:id="@+id/ItemCategory"
+        android:autofillHints=""
+        android:inputType="text" />
 
-        <EditText
-            android:id="@+id/ItemPrice"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/price"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/ItemCategory"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/category"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/ItemUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/username"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/SubmitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/submit" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
+        android:text="@string/submit"
+        android:padding="10dp"
+        app:backgroundTint="@android:color/tertiary_text_light"
+        android:id="@+id/SubmitButton"/>
 
 
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
