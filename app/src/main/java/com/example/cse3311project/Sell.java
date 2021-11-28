@@ -17,6 +17,7 @@ public class Sell extends AppCompatActivity {
 
     private final FirebaseDatabase rDatabase = FirebaseDatabase.getInstance();
     private final DatabaseReference databaseReference = rDatabase.getReference("Items");
+    public static int sell_counter;
 
 
     @Override
@@ -56,6 +57,7 @@ public class Sell extends AppCompatActivity {
     }
 
     private void postItemSale(String itemName, Float price, String category) {
+        sell_counter = sell_counter+1;
         SharedPreferences sp = getApplicationContext().getSharedPreferences("User", Context.MODE_PRIVATE);
         String username = sp.getString("Username","");
         Item item = new Item(itemName, category, username, price);

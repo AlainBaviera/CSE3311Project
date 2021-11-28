@@ -31,15 +31,10 @@ import com.google.firebase.database.ValueEventListener;
 public class Profile extends AppCompatActivity
 {
 
-    //private TextView userNameTextView;
-    //private TextView userProfession1;
-    //private TextView userId1;
     private FirebaseDatabase database;
-    private DatabaseReference reference;
+    private DatabaseReference reference, mreference;
     private FirebaseUser user;
-    //private FirebaseAuth Auth;
     private String userID;
-
 
 
     @Override
@@ -52,16 +47,12 @@ public class Profile extends AppCompatActivity
         String userID = sp.getString("Username","");
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
-
-        //userName1 = findViewById(R.id.userName);
+        mreference = FirebaseDatabase.getInstance().getReference("Items");
 
         final TextView userNameTextView = findViewById(R.id.userName);
         final TextView professionTextView = findViewById(R.id.userProfession);
         final TextView utaidTextView = findViewById(R.id.userUtaId);
 
-
-
-        //Toast.makeText(Profile.this, userID, Toast.LENGTH_LONG).show();
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -90,11 +81,14 @@ public class Profile extends AppCompatActivity
         PieChart pieChart = findViewById(R.id.pieChart);
         ArrayList<PieEntry> garage = new ArrayList<>();
 
-        garage.add(new PieEntry(508, "Sold"));
-        garage.add(new PieEntry(600, "Bought"));
-        garage.add(new PieEntry(400, "Traded"));
-        garage.add(new PieEntry(200, "$ Made"));
-        garage.add(new PieEntry(300, "$ Paid"));
+        BuyTrade b = new BuyTrade();
+        Sell s = new Sell();
+
+        garage.add(new PieEntry(3, "Sold"));
+        garage.add(new PieEntry(BuyTrade.counter, "Bought"));
+        garage.add(new PieEntry(2, "Traded"));
+        garage.add(new PieEntry(15, "$ Made"));
+        garage.add(new PieEntry(5, "$ Paid"));
 
         PieDataSet pieDataSet = new PieDataSet(garage, "garage");
         pieDataSet.setColors(ColorTemplate.COLORFUL_COLORS);

@@ -21,6 +21,7 @@ public class BuyTrade extends AppCompatActivity implements MyAdapter.OnItemListe
     DatabaseReference database;
     MyAdapter myAdapter;
     ArrayList<Item> list;
+    public static int counter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class BuyTrade extends AppCompatActivity implements MyAdapter.OnItemListe
 
     @Override
     public void OnItemClick(int position) {
+        counter = counter+1;
         Log.d(TAG, "OnItemClick: Clicked"+position);
         Intent intent = new Intent(this, PurchasePage.class);
         intent.putExtra("Selected Item", list.get(position));
