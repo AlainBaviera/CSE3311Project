@@ -56,9 +56,9 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Admin"
             android:layout_marginLeft="65dp"/>
 
 
@@ -82,10 +82,11 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/userProfession"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Student"
-            android:layout_marginLeft="35dp"/>
+            android:layout_marginLeft="35dp"
+            />
 
 
     </LinearLayout>
@@ -108,9 +109,9 @@
             android:layout_marginLeft="5dp"/>
 
         <TextView
+            android:id="@+id/userUtaId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12345"
             android:layout_marginLeft="60dp"/>
 
     </LinearLayout>

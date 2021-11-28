@@ -3,6 +3,10 @@ package com.example.cse3311project;
 public class User {
     String email, password, username;
 
+    public User(){
+
+    }
+
     public User(String email, String password, String username) {
         this.email = email;
         this.password = password;
