@@ -1,16 +1,34 @@
 package com.example.cse3311project;
 
 public class User {
-    String email, password, username;
+    String email, password, username, profession, utaid;
 
     public User(){
 
     }
 
-    public User(String email, String password, String username) {
+    public User(String email, String password, String username, String profession, String utaid) {
         this.email = email;
         this.password = password;
         this.username = username;
+        this.profession = profession;
+        this.utaid = utaid;
+    }
+
+    public String getProfession() {
+        return profession;
+    }
+
+    public void setProfession(String profession) {
+        this.profession = profession;
+    }
+
+    public String getUtaid() {
+        return utaid;
+    }
+
+    public void setUtaid(String utaid) {
+        this.utaid = utaid;
     }
 
     public String getUsername() {

@@ -38,6 +38,24 @@
         android:id="@+id/passwordRegister"
         android:autofillHints=""
         android:inputType="textPassword" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="Profession"
+        android:padding="10dp"
+        android:id="@+id/professionRegister"
+        android:autofillHints=""
+        android:inputType="text" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:hint="UTA_ID"
+        android:padding="10dp"
+        android:id="@+id/utaidRegister"
+        android:autofillHints=""
+        android:inputType="text" />
 
     <Button
         android:layout_width="match_parent"

@@ -2,7 +2,9 @@ package com.example.cse3311project;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,16 +48,16 @@ public class Profile extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
-
+        SharedPreferences sp = getApplicationContext().getSharedPreferences("User", Context.MODE_PRIVATE);
+        String userID = sp.getString("Username","");
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
-        userID = user.getUid();
 
         //userName1 = findViewById(R.id.userName);
 
-        final TextView userNameTextView = (TextView) findViewById(R.id.userName);
-        final TextView professionTextView = (TextView) findViewById(R.id.userProfession);
-        final TextView utaidTextView = (TextView) findViewById(R.id.userUtaId);
+        final TextView userNameTextView = findViewById(R.id.userName);
+        final TextView professionTextView = findViewById(R.id.userProfession);
+        final TextView utaidTextView = findViewById(R.id.userUtaId);
 
 
 
@@ -67,8 +69,8 @@ public class Profile extends AppCompatActivity
                 User userprofile = dataSnapshot.getValue(User.class);
                 if(userprofile != null)
                 {
-                    String utaid = userprofile.getEmail();
-                    String profession = userprofile.getPassword();
+                    String utaid = userprofile.getUtaid();
+                    String profession = userprofile.getProfession();
                     String username = userprofile.getUsername();
 
                     professionTextView.setText(profession);

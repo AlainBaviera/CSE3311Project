@@ -19,11 +19,15 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.Objects;
+
 public class Login extends AppCompatActivity {
     private EditText Email, Password;
     private FirebaseAuth Auth;
     final Query userQuery = FirebaseDatabase.getInstance().getReference().child("Users").orderByChild("email");
     SharedPreferences sp;
+    ArrayList<String> arrSharedPrefs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,11 +68,14 @@ public class Login extends AppCompatActivity {
                             new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                    for (DataSnapshot usernameSnapshot: dataSnapshot.getChildren()) {
+                                    for (DataSnapshot snapshot: dataSnapshot.getChildren()) {
                                         // result
-                                        String key = usernameSnapshot.getKey();
+                                        arrSharedPrefs.add(Objects.requireNonNull(snapshot.getValue()).toString());
+                                        String key = snapshot.getKey();
+                                        String email = (String) snapshot.child("email").getValue();
                                         SharedPreferences.Editor editor = sp.edit();
                                         editor.putString("Username",key);
+                                        editor.putString("Email",email);
                                         editor.apply();
                                     }
                                 }

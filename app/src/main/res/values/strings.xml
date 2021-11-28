@@ -26,4 +26,6 @@
     <string name="Login">LOGIN</string>
     <string name="Register" />
     <string name="registerButton">Register</string>
+    <string name="UTA_ID" />
+    <string name="Profession" />
 </resources>
