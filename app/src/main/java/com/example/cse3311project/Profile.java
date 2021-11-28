@@ -37,14 +37,7 @@ public class Profile extends AppCompatActivity
     private FirebaseUser user;
     //private FirebaseAuth Auth;
     private String userID;
-    //private Button logout;
 
-    private TextView userNameTextView, professionTextView, utaIDTextView;
-    private final String TAG = this.getClass().getName().toUpperCase();
-
-    private Map<String, String> userMap;
-    private String email;
-    private static final String USERS = "Users";
 
 
     @Override
@@ -52,59 +45,6 @@ public class Profile extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-            //receive data from login screen
-            Intent intent = getIntent();
-            email = intent.getStringExtra("email");
-
-            DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
-            DatabaseReference userRef = rootRef.child(USERS);
-            Log.v("Users", userRef.getKey());
-
-            userNameTextView = findViewById(R.id.userName);
-            professionTextView = findViewById(R.id.userProfession);
-            utaIDTextView = findViewById(R.id.userUtaId);
-
-
-            // Read from the database
-            userRef.addValueEventListener(new ValueEventListener() {
-                String username, profession, id;
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    for (DataSnapshot keyId: dataSnapshot.getChildren()) {
-                        if (keyId.child("email").getValue().equals(email)) {
-                            username = keyId.child("username").getValue(String.class);
-                            profession = keyId.child("email").getValue(String.class);
-                            id = keyId.child("password").getValue(String.class);
-                            break;
-                        }
-                    }
-                    userNameTextView.setText(username);
-                    professionTextView.setText(profession);
-                    utaIDTextView.setText(id);
-                }
-
-                @Override
-                public void onCancelled(DatabaseError error) {
-                    // Failed to read value
-                    Log.w(TAG, "Failed to read value.", error.toException());
-                }
-            });
-
-
-
-
-
-
-        /*
-        logout = (Button) findViewById(R.id.signOut);
-        logout.setOnClickListener(new view.onClickListener(){
-            @Override
-            public void onClick(View v){
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Profile.this, HomePage.class));
-            }
-        });
 
 
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -118,7 +58,7 @@ public class Profile extends AppCompatActivity
         final TextView utaidTextView = (TextView) findViewById(R.id.userUtaId);
 
 
-        //userNameTextView.setText("Unnikuttan");
+
         //Toast.makeText(Profile.this, userID, Toast.LENGTH_LONG).show();
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -143,7 +83,7 @@ public class Profile extends AppCompatActivity
 
             }
         });
-        */
+
 
         PieChart pieChart = findViewById(R.id.pieChart);
         ArrayList<PieEntry> garage = new ArrayList<>();
